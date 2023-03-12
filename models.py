@@ -46,7 +46,7 @@ class Topic(Base):
 
 
 def create_session():
-    engine = create_engine('postgresql://postgres:ego@localhost/test')
+    engine = create_engine('postgresql://your_postgres_data...')
     Base.metadata.create_all(bind=engine)
     Session = sessionmaker(bind=engine)
     return Session
